@@ -1,8 +1,9 @@
 <html>
     <head>
         <title>Kwitter</title>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
         <link rel="stylesheet" type="text/css" href="kwitter_room.css">
-        <script src="kwitter_room.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -14,14 +15,19 @@
             <div class="container">
             <h1>Welcome To Kwitter </h1>
             <button style="float: right; margin-right: 10px;" class="btn btn-danger" onclick="logout()"><i class="glyphicon glyphicon-log-out"></i> Logout</button>
+            <br>
+            <br>
             <h4 id="current_user" style="float: right; margin-right: 10px;"></h4>
+            <br>
             <br>
             <input style="width:50%;" type="number" placeholder="Room Number" class="form-control" id="room_num">
             <br>
-            <button class="button-lg button-success" onclick="makeRoom()">Make or Join Room</button>
+            <button class="button-lg button-success" onclick="addRoom()">Make or Join Room</button>
             <br>
-            <p id="room_names"></p>
+            <h2>Open Rooms</h2>
+            <div id="output"></div>
             </div>
         </center>
+        <script src="kwitter_room.js"></script>
     </body>
 </html>
